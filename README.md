@@ -1,2 +1,3 @@
-# storefront-child
-Child of SuperStore theme (customizations for https://hlavnezdrave.cz/).
+# SuperStore Child Theme
+
+Child of [SuperStore](https://themeforest.net/item/superstore-woocommerce-wordpress-theme/8117928)  theme (customizations for [e-shop __HlavneZdrave.cz__](https://hlavnezdrave.cz/) which is built on top of __[WordPress](https://wordpress.org/) + [WooCommerce](https://woocommerce.com/)__).
