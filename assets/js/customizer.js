@@ -1,6 +1,5 @@
-<?php
 /**
- * Child theme "SuperStore Child Theme" for WordPress.
+ * Implements support for WordPress Customizer.
  * 
  * Copyright (C) 2018 Ondřej Doněk
  * 
@@ -24,9 +23,20 @@
  * @since 1.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-    exit();
-}
+( function( $ ) {
 
-include( plugin_dir_path( __FILE__ ) . 'includes/setup_theme.php' );
-include( plugin_dir_path( __FILE__ ) . 'includes/class-customizer_support.php' );
+	wp.customize( 'odwpssch_foreground_color', function( value ) {
+		value.bind( function( newval ) {
+            console.log( value, newval );
+			$( 'body' ).css( 'color', newval + '!important' );
+		} );
+	} );
+
+	wp.customize( 'odwpssch_background_color', function( value ) {
+		value.bind( function( newval ) {
+            console.log( value, newval );
+            $( 'body' ).css( 'background-color', newval );
+		} );
+	} );
+
+} )( jQuery );

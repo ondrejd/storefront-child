@@ -28,5 +28,4 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit();
 }
 
-include( plugin_dir_path( __FILE__ ) . 'includes/setup_theme.php' );
-include( plugin_dir_path( __FILE__ ) . 'includes/class-customizer_support.php' );
+// ...
