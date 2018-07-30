@@ -1,6 +1,6 @@
 <?php
 /**
- * Child theme "SuperStore Child Theme" for WordPress.
+ * Child theme "StoreFront Child Theme" for WordPress.
  * 
  * Copyright (C) 2018 Ondřej Doněk
  * 
@@ -19,8 +19,8 @@
  *
  * @author Ondřej Doněk <ondrejd@gmail.com>
  * @license https://www.gnu.org/licenses/gpl-3.0.en.html GNU General Public License 3.0
- * @link https://github.com/ondrejd/superstore-child for the canonical source repository
- * @package superstore-child
+ * @link https://github.com/ondrejd/storefront-child for the canonical source repository
+ * @package storefront-child
  * @since 1.0
  */
 
@@ -28,12 +28,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit();
 }
 
-if ( ! function_exists( 'odwp_superstore_after_setup_theme' ) ) :
+if ( ! function_exists( 'odwpsfch_after_setup_theme' ) ) :
 
 /**
  * Setup theme.
  * @return void
- * @since 1.0.0
+ * @since 1.0
  * @uses add_option()
  * @uses add_image_size()
  * @uses add_theme_support()
@@ -41,25 +41,7 @@ if ( ! function_exists( 'odwp_superstore_after_setup_theme' ) ) :
  * @uses register_nav_menus()
  * @uses update_option()
  */
-function odwp_superstore_after_setup_theme() {
-
-    // Theme child options
-    add_option( 'odwpssch_foreground_color', '#544b2b' );
-    add_option( 'odwpssch_background_color', '#e8e8e8' );
-
-    // Site title & description & logo
-    add_theme_support( 'site-title' );
-    add_theme_support( 'site-description' );
-    add_theme_support( 'custom-logo', array(
-        'height'      => 100,
-        'width'       => 400,
-        'flex-height' => true,
-        'flex-width'  => true,
-        'header-text' => array( 'site-title', 'site-description' ),
-    ) );
-
-    // Site title
-    add_theme_support( 'title-tag' );
+function odwpsfch_after_setup_theme() {
 
     // Starter content
     add_theme_support( 'starter-content', array(
@@ -81,4 +63,13 @@ function odwp_superstore_after_setup_theme() {
 
 endif;
 // Setup up theme
-add_action( 'after_setup_theme', 'odwp_superstore_after_setup_theme', 101 );
+add_action( 'after_setup_theme', 'odwpsfch_after_setup_theme', 101 );
+
+
+
+add_action( 'wp', function() {
+    echo '<!-- ';
+    print_r($GLOBALS['wp_filter']);
+    echo ' -->';
+    exit;
+} );

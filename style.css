@@ -7,4 +7,280 @@ Author URI: https://ondrejd.com/
 Template: superstore
 */
 
-/* ... */
+
+/*
+ * Obecne styly
+ */
+body {
+    font-family: "Source Sans Pro",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    line-height: 1.618;
+    text-rendering: optimizeLegibility;
+}
+
+a:hover, a:active { outline: none; }
+
+
+/*
+ * Horni panel s menu
+ */
+#odwpsfch-topbar {
+    background-color:rgba(0, 0, 0, 0.035);
+    height: 2em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    text-align: right;
+}
+#odwpsfch-topbar ul {
+    list-style: none;
+    list-style-image: none;
+    list-style-type: none;
+}
+#odwpsfch-topbar li {
+    display: inline;
+    padding: 0 0.9em;
+}
+#odwpsfch-topbar li a, #odwpsfch-topbar li a:visited {
+    color: #544b2b;
+    font-size: 0.8em;
+    font-weight: 700;
+}
+#odwpsfch-topbar li a:hover {
+    color: #322909;
+}
+
+
+/*
+ * Hlavicka
+ */
+.site-header {
+    background-color: transparent;
+    border-bottom: 0 none !important;
+    max-width: 75.998em;
+    margin: 0 auto;
+    padding: 0;
+    position: normal;
+    width: 100%;
+}
+.site-header > .col-full {
+    padding: 0;
+}
+
+/*
+ * Hlavicka -> Logo
+ */
+.site-header .site-branding {
+    background-color: #fff;
+    height: 130px;
+    margin: 0 !important;
+    padding: 1.1em;
+    width: 33.33333% !important;
+}
+.custom-logo-link, .site-branding, .site-header-cart, .site-logo-anchor, .site-logo-link, .site-search {
+    margin: 0 !important;
+}
+.site-header .site-branding img {
+    border-radius: 0;
+    max-width: 230px;
+}
+
+/*
+ * Hlavicka -> Vyhledavani
+ */
+.site-header .site-search {
+    background-color: #fff;
+    border-radius: 0.382em;
+    float: left !important;
+    height: 130px;
+    padding: 3em 2em;
+    width: 33.33333% !important;
+}
+
+/*
+ * Hlavicka -> Kosik
+ */
+.site-header .site-header-cart {
+    background-color: #fff;
+    display: block;
+    float: left !important;
+    height: 130px;
+    padding: 3em 2em;
+    text-align: right;
+    width: 33.33333% !important;
+}
+.site-header .site-header-cart > li {
+    margin-left: 25%;
+    position: relative;
+    right: -10px;
+    top: -14px;
+}
+.site-header .site-header-cart .cart-contents {
+    /* tzn. .site-header .site-header-cart > li > a */
+    background-color: #544b2b;
+    padding: .857em 1.387em;
+        padding-right: 1.387em;
+    display: block;
+    text-align: left;
+    -webkit-border-bottom-right-radius: 0.382em;
+    border-bottom-right-radius: 0.382em;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #f8f8f8 !important;
+    font-weight: 700;
+    position: relative;
+    padding-right: 5.874em;
+}
+.site-header .site-header-cart .cart-contents span.amount {
+    max-width: 150px;
+    width: 75%;
+}
+.site-header .site-header-cart .cart-contents span.count {
+    background: #ebbc13;
+    -webkit-border-top-right-radius: 0.382em;
+    -webkit-border-bottom-right-radius: 0.382em;
+    border-top-right-radius: 0.382em;
+    border-bottom-right-radius: 0.382em;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    height: 53px;
+    width: 53px;
+    display: block;
+    float: right;
+    opacity: 1.0;
+    position: relative;
+    top: -40px;
+    right: -94px;
+    text-align: center;
+    padding-top: 13px;
+    font-weight: 800;
+    font-size: 1.1em;
+}
+
+.site-header .site-header-cart .cart-contents::before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    vertical-align: -.125em;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    line-height: inherit;
+    vertical-align: baseline;
+    content: "\f291";
+    height: 1em;
+    line-height: 1.618;
+}
+.site-header-cart .cart-contents::after {
+    display: none;
+}
+
+/*
+ * Hlavicka -> Hlavni menu
+ */
+.site-header .storefront-primary-navigation {
+    background-color: #544b2b;
+    border-radius: 0 0 0.382em 0.382em;
+}
+.site-header .storefront-primary-navigation > .col-full {
+    margin: 0;
+    width: 100%;
+}
+.site-header .main-navigation {
+    clear: none !important;
+    float: none !important;
+    margin-left: 1.3888888888888888% !important;
+    margin-right: 1.3888888888888888% !important;
+    width: 97.22222222222221% !important;
+}
+.site-header .storefront-primary-navigation .main-navigation ul.menu > li > a,
+.site-header .storefront-primary-navigation .main-navigation ul.nav-menu > li > a {
+    color: #e5dfcc;
+    font-weight: bold;
+    padding: 0.5em 1em;
+}
+
+
+/*
+ * Hlavni obsah
+ */
+.content-area {
+    background-color: #fff;
+    border-radius: 0.382em;
+    padding: 1.618em;
+    width: 74.22222222222221% !important;
+}
+
+
+/*
+ * Widgety
+ */
+.widget-area {
+    margin-right: 0 !important;
+    width: 24.22222222222222% !important;
+}
+.widget-area .widget {
+    font-size: .875em;
+    background-color: #fff;
+    font-size: .857em;
+    padding: 1.618em 0.382em 1.618em 0.382em;
+    border-radius: 0.382em;
+}
+/* Nadpisy */
+.home #content .widget h1, .home #content .widget h2 {
+    font-size: 1.618em;
+    margin-bottom: 0;
+    border-bottom: 0.15em solid rgba(0, 0, 0, 0.025);
+    padding: 1em 0 .382em;
+    margin-bottom: 1.618em;
+    text-transform: none;
+}
+.widget .widget-title, .widget widget-title {
+    border-bottom: 0px none;
+    color: #544b2b;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0;
+    margin: 0 0 0.618em 0;
+}
+/* Kategorie */
+.widget_nav_menu ul {
+    padding-left: 1.618em;
+}
+.widget_nav_menu ul li {
+    list-style: disc;
+    margin: 0;
+    padding: 0;
+}
+.widget_nav_menu ul li::before {
+    content: "";
+}
+.widget_nav_menu ul li a {
+    text-decoration: none !important;
+}
+/* Produkty na uvodni strance */
+.product_list_widget li {
+    border-bottom: 0px none;
+    padding: 0;
+    margin: 0 0 0.1em 0;
+}
+
+/* Heureka widget */
+#showHeurekaBadgeHere-12 { text-align: center; }
+#showHeurekaBadgeHere-12 a { display: inline-block;}
+
+
+/*
+ * Drobeckova navigace
+ */
+.storefront-breadcrumb {
+    padding: 0.618em 0;
+    margin: 0;
+}
